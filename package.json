@@ -1,0 +1,30 @@
+{
+  "name": "carrinho-3d-threejs",
+  "version": "1.0.0",
+  "description": "Projeto interativo de carrinho 3D usando Three.js, inspirado no site do Bruno Simon",
+  "main": "js/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "keywords": [
+    "threejs",
+    "3d",
+    "car",
+    "interactive",
+    "webgl",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
