@@ -138,4 +138,183 @@ kbd {
 
 canvas {
   will-change: transform;
+}
+
+/* Touch Controls */
+.touch-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 200;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.touch-controls.mobile {
+  display: block;
+}
+
+.touch-joystick {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.touch-joystick-knob {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.touch-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 200;
+}
+
+.touch-buttons.mobile {
+  display: flex;
+}
+
+.touch-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  backdrop-filter: blur(10px);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.touch-button:active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.95);
+}
+
+.touch-button.pressed {
+  background: rgba(76, 175, 80, 0.5);
+  border-color: rgba(76, 175, 80, 0.8);
+}
+
+/* Speedometer */
+.speedometer {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #4fc3f7;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Score Display */
+.score-display {
+  position: absolute;
+  bottom: 30px;
+  right: 170px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  min-width: 100px;
+}
+
+.speed-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4fc3f7;
+  line-height: 1;
+}
+
+.speed-label {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 2px;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700;
+  line-height: 1;
+}
+
+/* Mobile detection */
+@media (max-width: 768px), (pointer: coarse) {
+  .touch-controls {
+    display: block;
+  }
+  
+  .touch-buttons {
+    display: flex;
+  }
+  
+  .speedometer {
+    width: 100px;
+    height: 100px;
+    bottom: 120px;
+    right: 20px;
+  }
+  
+  .speed-value {
+    font-size: 24px;
+  }
+  
+  .score-display {
+    bottom: 120px;
+    right: 140px;
+    padding: 10px 15px;
+    min-width: 80px;
+  }
+  
+  .score-value {
+    font-size: 20px;
+  }
 } 

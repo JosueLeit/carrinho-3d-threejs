@@ -16,21 +16,45 @@
       <div class="controls-info">
         <h1>Carrinho 3D Interativo</h1>
         <div class="instructions">
-          <p><strong>Modo Debug:</strong></p>
-          <p>🔍 Versão simplificada</p>
-          <p>🎯 Cubo vermelho = carrinho</p>
-          <p>🟢 Plano verde = chão</p>
+          <p><strong>Modo Avançado:</strong></p>
+          <p>🚗 Múltiplos tipos de controle</p>
+          <p>🎮 Gamepad/Touch/Teclado</p>
+          <p>⚙️ Sensibilidade configurável</p>
           <br>
           <p><strong>🎮 Controles:</strong></p>
-          <p><kbd>W</kbd> - Acelerar</p>
-          <p><kbd>S</kbd> - Ré</p>
-          <p><kbd>A</kbd> - Esquerda</p>
-          <p><kbd>D</kbd> - Direita</p>
+          <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> - Movimento</p>
+          <p><kbd>P</kbd> - Debug Física</p>
+          <p><strong>Presets:</strong></p>
+          <p><kbd>1</kbd> Casual <kbd>2</kbd> Sport <kbd>3</kbd> Precise</p>
+          <p><kbd>0</kbd> - Reset configurações</p>
           <p>Mouse - Girar câmera</p>
-          <p>Scroll - Zoom</p>
           <p><small>📊 Veja painel debug →</small></p>
         </div>
       </div>
+      
+      <!-- Speedometer -->
+      <div id="speedometer" class="speedometer">
+        <div class="speed-value">0</div>
+        <div class="speed-label">km/h</div>
+      </div>
+      
+      <!-- Score Display -->
+      <div id="score-display" class="score-display">
+        <div class="score-label">Score</div>
+        <div class="score-value">0</div>
+      </div>
+    </div>
+
+    <!-- Touch Controls for Mobile -->
+    <div id="touch-controls" class="touch-controls">
+      <div id="touch-joystick" class="touch-joystick">
+        <div id="touch-joystick-knob" class="touch-joystick-knob"></div>
+      </div>
+    </div>
+
+    <div id="touch-buttons" class="touch-buttons">
+      <div id="touch-brake" class="touch-button" data-key="KeyS">S</div>
+      <div id="touch-accelerate" class="touch-button" data-key="KeyW">W</div>
     </div>
 
     <script src="js/main.js" type="module"></script>
